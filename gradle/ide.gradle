@@ -1,0 +1,16 @@
+// Various IDE support
+
+import org.gradle.plugins.ide.idea.model.*
+
+// IDEs
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+
+eclipse {
+  classpath {
+    defaultOutputDir = file('build-eclipse') //customize the classes output directory
+  }
+}
+
+

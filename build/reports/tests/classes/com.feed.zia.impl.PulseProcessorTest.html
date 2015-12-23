@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class com.feed.zia.impl.PulseProcessorTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class com.feed.zia.impl.PulseProcessorTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.feed.zia.impl.html">com.feed.zia.impl</a> &gt; PulseProcessorTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">4</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">22.339s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">testFail</td>
+<td>0.247s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testStartAllStopAll</td>
+<td>6.025s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testStartStopMidAir</td>
+<td>0.038s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testStartStopSingleService</td>
+<td>16.029s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>Service Dependency Graph: 
+-----------------Service: Dependents--------------------------
+{1:1:1}: {2:5:0} 
+{0:2:2}: {3:6:0} {2:4:3} 
+{0:3:2}: {3:6:0} {2:4:3} 
+{2:4:3}: {3:6:0} {2:5:0} {1:1:1} 
+{2:5:0}: 
+{3:6:0}: 
+{0:7:0}: 
+-----------------Service: DependsOn--------------------------
+{1:1:1}: {2:4:3} 
+{0:2:2}: 
+{0:3:2}: 
+{2:4:3}: {0:2:2} {0:3:2} 
+{2:5:0}: {1:1:1} {2:4:3} 
+{3:6:0}: {0:2:2} {0:3:2} {2:4:3} 
+{0:7:0}: 
+-----------------------------------------------------------
+
+Service Dependency Graph: 
+-----------------Service: Dependents--------------------------
+{1:1:1}: {2:5:0} 
+{0:2:2}: {3:6:0} {2:4:3} 
+{0:3:2}: {3:6:0} {2:4:3} 
+{2:4:3}: {3:6:0} {2:5:0} {1:1:1} 
+{2:5:0}: 
+{3:6:0}: 
+{0:7:0}: 
+-----------------Service: DependsOn--------------------------
+{1:1:1}: {2:4:3} 
+{0:2:2}: 
+{0:3:2}: 
+{2:4:3}: {0:2:2} {0:3:2} 
+{2:5:0}: {1:1:1} {2:4:3} 
+{3:6:0}: {0:2:2} {0:3:2} {2:4:3} 
+{0:7:0}: 
+-----------------------------------------------------------
+
+LAUNCHING: {1:1:1}
+LAUNCHING: {2:5:0}
+service-{2:5:0} NO outerServices wait needed: []
+service-{1:1:1} WAIT outerServices to start: [{2:5:0}]
+service-{2:5:0} NOW signal innerServices : [{1:1:1}, {2:4:3}]
+service-{1:1:1} signaling dependent: {1:1:1} by: service-{2:5:0}
+service-{2:5:0} is up and running!!!
+service-{1:1:1} OK outerServices are started: [{2:5:0}]
+service-{2:5:0} is up and running!!!
+service-{1:1:1} NOW signal innerServices : [{2:4:3}]
+service-{1:1:1} is up and running!!!
+service-{2:5:0} is up and running!!!
+service-{1:1:1} is up and running!!!
+service-{2:5:0} is up and running!!!
+service-{1:1:1} is up and running!!!
+service-{2:5:0} is up and running!!!
+service-{1:1:1} is up and running!!!
+service-{2:5:0} is up and running!!!
+service-{1:1:1} is up and running!!!
+service-{2:5:0} is up and running!!!
+service-{1:1:1} is up and running!!!
+service-{2:5:0} is up and running!!!
+service-{1:1:1} is up and running!!!
+service-{2:5:0} is up and running!!!
+service-{1:1:1} is up and running!!!
+service-{2:5:0} is up and running!!!
+service-{1:1:1} is up and running!!!
+service-{2:5:0} is up and running!!!
+service-{1:1:1} is up and running!!!
+service-{2:5:0} is up and running!!!
+service-{1:1:1} is up and running!!!
+service-{2:5:0} is up and running!!!
+service-{1:1:1} is up and running!!!
+service-{2:5:0} is up and running!!!
+service-{1:1:1} is up and running!!!
+service-{2:5:0} is up and running!!!
+service-{1:1:1} is up and running!!!
+STOPPING: {1:1:1}
+service-{2:5:0} is up and running!!!
+Service Dependency Graph: 
+-----------------Service: Dependents--------------------------
+{1:1:1}: {2:5:0} 
+{0:2:2}: {3:6:0} {2:4:3} 
+{0:3:2}: {3:6:0} {2:4:3} 
+{2:4:3}: {3:6:0} {2:5:0} {1:1:1} 
+{2:5:0}: 
+{3:6:0}: 
+{0:7:0}: 
+-----------------Service: DependsOn--------------------------
+{1:1:1}: {2:4:3} 
+{0:2:2}: 
+{0:3:2}: 
+{2:4:3}: {0:2:2} {0:3:2} 
+{2:5:0}: {1:1:1} {2:4:3} 
+{3:6:0}: {0:2:2} {0:3:2} {2:4:3} 
+{0:7:0}: 
+-----------------------------------------------------------
+
+LAUNCHING: {1:1:1}
+LAUNCHING: {2:5:0}
+STOPPING: {1:1:1}
+Service Dependency Graph: 
+-----------------Service: Dependents--------------------------
+{1:1:1}: {2:5:0} 
+{0:2:2}: {3:6:0} {2:4:3} 
+{0:3:2}: {3:6:0} {2:4:3} 
+{2:4:3}: {3:6:0} {2:5:0} {1:1:1} 
+{2:5:0}: 
+{3:6:0}: 
+{0:7:0}: 
+-----------------Service: DependsOn--------------------------
+{1:1:1}: {2:4:3} 
+{0:2:2}: 
+{0:3:2}: 
+{2:4:3}: {0:2:2} {0:3:2} 
+{2:5:0}: {1:1:1} {2:4:3} 
+{3:6:0}: {0:2:2} {0:3:2} {2:4:3} 
+{0:7:0}: 
+-----------------------------------------------------------
+
+LAUNCHING: {1:1:1}
+LAUNCHING: {2:5:0}
+service-{1:1:1} HINT innerServices to exit: [{2:4:3}]
+service-{1:1:1} HINT outerServices to exit: [{2:5:0}]
+service-{2:5:0} end signal dependent: {2:5:0} by: service-{1:1:1}
+LAUNCHING: {0:2:2}
+LAUNCHING: {3:6:0}
+LAUNCHING: {2:4:3}
+LAUNCHING: {0:3:2}
+service-{2:5:0} NO outerServices wait needed: []
+LAUNCHING: {0:7:0}
+service-{1:1:1} WAIT outerServices to start: [{2:5:0}]
+service-{1:1:1} WAIT outerServices to start: [{2:5:0}]
+service-{3:6:0} NO outerServices wait needed: []
+service-{2:5:0} NO outerServices wait needed: []
+service-{0:2:2} WAIT outerServices to start: [{3:6:0}, {2:4:3}]
+service-{2:4:3} WAIT outerServices to start: [{3:6:0}, {2:5:0}, {1:1:1}]
+service-{0:3:2} WAIT outerServices to start: [{3:6:0}, {2:4:3}]
+service-{0:7:0} NO outerServices wait needed: []
+service-{2:5:0} HINT innerServices to exit: [{1:1:1}, {2:4:3}]
+service-{1:1:1} end signal dependent: {1:1:1} by: service-{2:5:0}
+service-{2:5:0} NO outerServices to signal: []
+service-{1:1:1} SERVICE SHUTDOWN SUCCESS
+
+service-{2:5:0} NOW signal innerServices : [{1:1:1}, {2:4:3}]
+service-{1:1:1} signaling dependent: {1:1:1} by: service-{2:5:0}
+service-{1:1:1} OK outerServices are started: [{2:5:0}]
+service-{3:6:0} NOW signal innerServices : [{0:2:2}, {0:3:2}, {2:4:3}]
+service-{0:2:2} signaling dependent: {0:2:2} by: service-{3:6:0}
+service-{0:3:2} signaling dependent: {0:3:2} by: service-{3:6:0}
+service-{2:4:3} signaling dependent: {2:4:3} by: service-{3:6:0}
+service-{2:5:0} NOW signal innerServices : [{1:1:1}, {2:4:3}]
+service-{2:5:0} is up and running!!!
+service-{3:6:0} is up and running!!!
+service-{1:1:1} signaling dependent: {1:1:1} by: service-{2:5:0}
+service-{2:4:3} signaling dependent: {2:4:3} by: service-{2:5:0}
+service-{2:5:0} is up and running!!!
+service-{1:1:1} OK outerServices are started: [{2:5:0}]
+service-{0:7:0} NO innerServices to signal: []
+service-{0:7:0} is up and running!!!
+service-{1:1:1} NOW signal innerServices : [{2:4:3}]
+service-{1:1:1} HINT innerServices to exit: [{2:4:3}]
+service-{1:1:1} HINT outerServices to exit: [{2:5:0}]
+service-{2:5:0} end signal dependent: {2:5:0} by: service-{1:1:1}
+service-{2:5:0} HINT innerServices to exit: [{1:1:1}, {2:4:3}]
+service-{1:1:1} end signal dependent: {1:1:1} by: service-{2:5:0}
+service-{3:6:0} is up and running!!!
+service-{2:5:0} NO outerServices to signal: []
+service-{1:1:1} SERVICE SHUTDOWN SUCCESS
+
+service-{2:5:0} is up and running!!!
+service-{0:7:0} is up and running!!!
+service-{1:1:1} NOW signal innerServices : [{2:4:3}]
+service-{2:4:3} signaling dependent: {2:4:3} by: service-{1:1:1}
+service-{1:1:1} is up and running!!!
+service-{2:4:3} OK outerServices are started: [{3:6:0}, {2:5:0}, {1:1:1}]
+service-{3:6:0} is up and running!!!
+service-{2:5:0} is up and running!!!
+service-{0:7:0} is up and running!!!
+service-{1:1:1} is up and running!!!
+service-{2:4:3} NOW signal innerServices : [{0:2:2}, {0:3:2}]
+service-{0:2:2} signaling dependent: {0:2:2} by: service-{2:4:3}
+service-{0:3:2} signaling dependent: {0:3:2} by: service-{2:4:3}
+service-{2:4:3} is up and running!!!
+service-{0:2:2} OK outerServices are started: [{3:6:0}, {2:4:3}]
+service-{0:3:2} OK outerServices are started: [{3:6:0}, {2:4:3}]
+service-{3:6:0} is up and running!!!
+service-{2:5:0} is up and running!!!
+service-{1:1:1} is up and running!!!
+service-{0:7:0} is up and running!!!
+service-{0:2:2} NO innerServices to signal: [{3:6:0}, {2:4:3}]
+service-{0:2:2} is up and running!!!
+service-{2:4:3} is up and running!!!
+service-{0:3:2} NO innerServices to signal: [{3:6:0}, {2:4:3}]
+service-{0:3:2} is up and running!!!
+service-{3:6:0} is up and running!!!
+service-{2:5:0} is up and running!!!
+service-{1:1:1} is up and running!!!
+service-{0:7:0} is up and running!!!
+service-{0:2:2} is up and running!!!
+service-{2:4:3} is up and running!!!
+service-{0:3:2} is up and running!!!
+STOPPING: {1:1:1}
+STOPPING: {2:4:3}
+STOPPING: {0:2:2}
+STOPPING: {0:3:2}
+STOPPING: {2:5:0}
+STOPPING: {3:6:0}
+STOPPING: {0:7:0}
+</pre>
+</span>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>SLF4J: Failed to load class &quot;org.slf4j.impl.StaticLoggerBinder&quot;.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 2.5</a> at Dec 23, 2015 12:34:46 AM</p>
+</div>
+</div>
+</body>
+</html>

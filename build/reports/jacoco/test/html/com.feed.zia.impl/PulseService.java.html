@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>PulseService.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">service-module</a> &gt; <a href="index.source.html" class="el_package">com.feed.zia.impl</a> &gt; <span class="el_source">PulseService.java</span></div><h1>PulseService.java</h1><pre class="source lang-java linenums">package com.feed.zia.impl;
+
+import com.feed.zia.PulseServiceIfc;
+import com.feed.zia.conf.PConfig;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.List;
+import java.util.concurrent.CountDownLatch;
+
+/**
+ * Created by mveerapp on 12/22/2015.
+ */
+public class PulseService implements PulseServiceIfc {
+<span class="fc" id="L15">    private static final Logger LOG = LoggerFactory.getLogger(PulseService.class);</span>
+
+    private final PConfig serviceConfig;
+    private final List&lt;PConfig&gt; outerServices;
+    private final List&lt;PConfig&gt; innerServices;
+    private final CountDownLatch prologCountDown;
+    private final CountDownLatch epilogCountDown;
+
+<span class="fc" id="L23">    private boolean timeToExit = false;</span>
+    private Thread thread;
+
+<span class="fc" id="L26">    public PulseService(PConfig service, List&lt;PConfig&gt; iDependOn, List&lt;PConfig&gt; dependents) {</span>
+<span class="fc" id="L27">        serviceConfig = service;</span>
+<span class="fc" id="L28">        outerServices = iDependOn;</span>
+<span class="fc" id="L29">        innerServices = dependents;</span>
+<span class="fc" id="L30">        prologCountDown = new CountDownLatch(serviceConfig.getOutDegree());</span>
+<span class="fc" id="L31">        epilogCountDown = new CountDownLatch(serviceConfig.getInDegree());</span>
+<span class="fc" id="L32">    }</span>
+
+    public boolean atExit() {
+<span class="fc" id="L35">        return timeToExit;</span>
+    }
+
+    public void signalStartDone() {
+<span class="fc" id="L39">        Thread current = Thread.currentThread();</span>
+<span class="fc" id="L40">        System.out.println(thread.getName() + &quot; signaling dependent: &quot; + serviceConfig + &quot; by: &quot; + current.getName());</span>
+<span class="fc" id="L41">        prologCountDown.countDown();</span>
+<span class="fc" id="L42">    }</span>
+
+    public void signalToEnd() {
+<span class="fc" id="L45">        Thread current = Thread.currentThread();</span>
+<span class="fc" id="L46">        timeToExit = true;</span>
+<span class="fc" id="L47">        System.out.println(thread.getName() + &quot; end signal dependent: &quot; + serviceConfig + &quot; by: &quot; + current.getName());</span>
+<span class="fc" id="L48">        epilogCountDown.countDown();</span>
+<span class="fc" id="L49">    }</span>
+
+    private void prologService() throws InterruptedException {
+<span class="fc bfc" id="L52" title="All 2 branches covered.">        if (!outerServices.isEmpty()) {</span>
+<span class="fc" id="L53">            System.out.println(thread.getName() + &quot; WAIT outerServices to start: &quot; + outerServices);</span>
+<span class="fc" id="L54">            prologCountDown.await(); // wait for all to finish, if the current count is zero returns immediately.</span>
+<span class="fc" id="L55">            System.out.println(thread.getName() + &quot; OK outerServices are started: &quot; + outerServices);</span>
+        } else {
+<span class="fc" id="L57">            System.out.println(thread.getName() + &quot; NO outerServices wait needed: &quot; + outerServices);</span>
+        }
+<span class="fc" id="L59">        Thread.sleep(serviceConfig.getSleepTimer());</span>
+<span class="fc bfc" id="L60" title="All 2 branches covered.">        if (!innerServices.isEmpty()) {</span>
+<span class="fc" id="L61">            System.out.println(thread.getName() + &quot; NOW signal innerServices : &quot; + innerServices);</span>
+<span class="fc bfc" id="L62" title="All 2 branches covered.">            for (PConfig sc : innerServices) {</span>
+<span class="fc bfc" id="L63" title="All 2 branches covered.">                if (sc.getService() != null) {</span>
+<span class="fc" id="L64">                    sc.getService().signalStartDone();</span>
+                }
+<span class="fc" id="L66">            }</span>
+        } else {
+<span class="fc" id="L68">            System.out.println(thread.getName() + &quot; NO innerServices to signal: &quot; + outerServices);</span>
+        }
+<span class="fc" id="L70">    }</span>
+
+    private void signalToEnd(List&lt;PConfig&gt; services, String name) {
+<span class="fc bfc" id="L73" title="All 2 branches covered.">        if (!services.isEmpty()) {</span>
+<span class="fc" id="L74">            System.out.println(thread.getName() + &quot; HINT &quot; + name + &quot; to exit: &quot; + services);</span>
+<span class="fc bfc" id="L75" title="All 2 branches covered.">            for (PConfig sc : services) {</span>
+<span class="fc bfc" id="L76" title="All 2 branches covered.">                if (sc.getService() != null) {</span>
+<span class="fc" id="L77">                    sc.getService().signalToEnd();</span>
+                }
+<span class="fc" id="L79">            }</span>
+        } else {
+<span class="fc" id="L81">            System.out.println(thread.getName() + &quot; NO &quot; + name + &quot; to signal: &quot; + services);</span>
+        }
+<span class="fc" id="L83">    }</span>
+
+    private void epilogService() throws InterruptedException {
+<span class="fc" id="L86">        signalToEnd(innerServices, &quot;innerServices&quot;);</span>
+<span class="fc" id="L87">        signalToEnd(outerServices, &quot;outerServices&quot;);</span>
+<span class="fc" id="L88">        epilogCountDown.await();</span>
+<span class="fc" id="L89">    }</span>
+
+    public void start() {
+        try {
+<span class="fc" id="L93">            thread = Thread.currentThread();</span>
+<span class="fc" id="L94">            prologService();</span>
+<span class="fc bfc" id="L95" title="All 2 branches covered.">            while (!timeToExit) {</span>
+<span class="fc" id="L96">                System.out.println(thread.getName() + &quot; is up and running!!!&quot;);</span>
+<span class="fc" id="L97">                Thread.sleep(serviceConfig.getSleepTimer());</span>
+            }
+<span class="fc" id="L99">            epilogService();</span>
+<span class="pc bpc" id="L100" title="1 of 2 branches missed.">            System.out.println(thread.getName() + &quot; SERVICE SHUTDOWN &quot; + (timeToExit ? &quot;SUCCESS&quot; : &quot;FAILURE&quot;) + &quot;\n&quot;);</span>
+<span class="nc" id="L101">        } catch (InterruptedException ex) {</span>
+<span class="nc" id="L102">            System.out.println(thread.getName() + &quot; call for shutdown? -&gt; timeToExit: &quot; + timeToExit);</span>
+<span class="fc" id="L103">        }</span>
+<span class="fc" id="L104">    } // return;</span>
+
+
+    public void stop() {
+<span class="fc" id="L108">        timeToExit = true;</span>
+<span class="fc" id="L109">    }</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.2.201409121644</span></div></body></html>

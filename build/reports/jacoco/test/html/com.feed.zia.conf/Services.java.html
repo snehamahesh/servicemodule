@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>Services.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">service-module</a> &gt; <a href="index.source.html" class="el_package">com.feed.zia.conf</a> &gt; <span class="el_source">Services.java</span></div><h1>Services.java</h1><pre class="source lang-java linenums">package com.feed.zia.conf;
+
+import java.util.Collections;
+import java.util.IdentityHashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+/**
+ * Created by mveerapp on 12/22/2015.
+ */
+<span class="fc" id="L13">public class Services {</span>
+
+<span class="fc" id="L15">    private List&lt;PConfig&gt; services = new LinkedList&lt;&gt;();</span>
+<span class="fc" id="L16">    private final Map&lt;PConfig, List&lt;PConfig&gt;&gt; graph = new IdentityHashMap&lt;&gt;();</span>
+<span class="fc" id="L17">    private final Map&lt;PConfig, List&lt;PConfig&gt;&gt; hparg = new IdentityHashMap&lt;&gt;();</span>
+
+    public void addDependent(PConfig v, PConfig w) {
+<span class="fc" id="L20">        dependent(graph, v, w);</span>
+<span class="fc" id="L21">        w.incrementInDegree();</span>
+<span class="fc" id="L22">        dependent(hparg, w, v);</span>
+<span class="fc" id="L23">    }</span>
+
+    private void dependent(Map&lt;PConfig, List&lt;PConfig&gt;&gt; map, PConfig v, PConfig w) {
+        List&lt;PConfig&gt; vList;
+<span class="fc bfc" id="L27" title="All 2 branches covered.">        if (map.containsKey(v)) {</span>
+<span class="fc" id="L28">            vList = map.get(v);</span>
+<span class="fc" id="L29">            vList.add(w);</span>
+        } else {
+<span class="fc" id="L31">            vList = new LinkedList&lt;PConfig&gt;();</span>
+<span class="fc" id="L32">            vList.add(w);</span>
+<span class="fc" id="L33">            map.put(v, vList);</span>
+        }
+<span class="fc" id="L35">    }</span>
+
+    public void addEmptyDependent(PConfig v) {
+<span class="pc bpc" id="L38" title="1 of 2 branches missed.">        if (!graph.containsKey(v)) {</span>
+<span class="fc" id="L39">            graph.put(v, new LinkedList&lt;PConfig&gt;());</span>
+        }
+<span class="fc bfc" id="L41" title="All 2 branches covered.">        if (!hparg.containsKey(v)) {</span>
+<span class="fc" id="L42">            hparg.put(v, new LinkedList&lt;PConfig&gt;());</span>
+        }
+<span class="fc" id="L44">    }</span>
+
+    public List&lt;PConfig&gt; getDependentsOf(PConfig serviceConfig) {
+<span class="fc bfc" id="L47" title="All 2 branches covered.">        if (hparg.containsKey(serviceConfig)) {</span>
+<span class="fc" id="L48">            return hparg.get(serviceConfig).stream().collect(Collectors.toList());</span>
+        }
+<span class="fc" id="L50">        return Collections.EMPTY_LIST;</span>
+    }
+
+    public List&lt;PConfig&gt; getDependsOn(PConfig serviceConfig) {
+<span class="pc bpc" id="L54" title="1 of 2 branches missed.">        if (graph.containsKey(serviceConfig)) {</span>
+<span class="fc" id="L55">            return graph.get(serviceConfig).stream().collect(Collectors.toList());</span>
+        }
+<span class="nc" id="L57">        return Collections.EMPTY_LIST;</span>
+    }
+
+    public List&lt;PConfig&gt; getServices() {
+<span class="fc" id="L61">        return services;</span>
+    }
+
+    public void setServices(List&lt;PConfig&gt; services) {
+<span class="fc" id="L65">        this.services = services;</span>
+<span class="fc" id="L66">    }</span>
+
+    @SuppressWarnings(&quot;PMD&quot;)
+    public String toString() {
+<span class="fc" id="L70">        StringBuilder s = new StringBuilder();</span>
+<span class="fc" id="L71">        s.append(&quot;-----------------Service: Dependents--------------------------\n&quot;);</span>
+<span class="fc bfc" id="L72" title="All 2 branches covered.">        for (PConfig k : services) {</span>
+<span class="fc" id="L73">            s.append(k + &quot;: &quot;);</span>
+<span class="pc bpc" id="L74" title="1 of 2 branches missed.">            if (graph.containsKey(k)) {</span>
+<span class="fc" id="L75">                graph.get(k).stream().forEach(w -&gt; s.append(w + &quot; &quot;));</span>
+            }
+<span class="fc" id="L77">            s.append(&quot;\n&quot;);</span>
+<span class="fc" id="L78">        }</span>
+<span class="fc" id="L79">        s.append(&quot;-----------------Service: DependsOn--------------------------\n&quot;);</span>
+<span class="fc bfc" id="L80" title="All 2 branches covered.">        for (PConfig k : services) {</span>
+<span class="fc" id="L81">            s.append(k + &quot;: &quot;);</span>
+<span class="fc bfc" id="L82" title="All 2 branches covered.">            if (hparg.containsKey(k)) {</span>
+<span class="fc" id="L83">                hparg.get(k).stream().forEach(w -&gt; s.append(w + &quot; &quot;));</span>
+            }
+<span class="fc" id="L85">            s.append(&quot;\n&quot;);</span>
+<span class="fc" id="L86">        }</span>
+<span class="fc" id="L87">        s.append(&quot;-----------------------------------------------------------\n&quot;);</span>
+
+<span class="fc" id="L89">        return s.toString();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.2.201409121644</span></div></body></html>

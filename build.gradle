@@ -1,0 +1,34 @@
+group 'com.pulsar.app'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+// code checks
+apply from: rootProject.file('gradle/codechecks.gradle')
+
+sourceCompatibility = 1.8
+
+task createWrapper(type: Wrapper) {
+    description = "Create a gradle wrapper for you project"
+    gradleVersion = '2.9'
+}
+
+task showRepos << {
+    description = "List the current repositories"
+    println "Repositories: "
+    println repositories.collect { it.name }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // using SLF4J logging API at compile time
+    compile 'org.slf4j:slf4j-api:1.7.5'
+    compile 'org.yaml:snakeyaml:1.11'
+
+    testCompile 'junit:junit:4.11'
+}
+
+//mainClassName = 'com.feed.zia.PulsarProcessor'
+//run.args = ["server", project.file(["conf", 'services.yml'].join(File.separator))]

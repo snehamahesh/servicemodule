@@ -1,0 +1,36 @@
+#[Services Configuration Data]
+services:
+    - name         : 1
+      dependencies : [5]
+      description  : 1 service
+      sleepTimer   : 1000 # milliseconds
+
+    - name         : 2
+      dependencies : [6,4]
+      description  : 2 service
+      sleepTimer   : 1000 # milliseconds
+
+    - name         : 3
+      dependencies : [6,4]
+      description  : 2 service
+      sleepTimer   : 1000 # milliseconds
+
+    - name         : 4
+      dependencies : [6,5,1]
+      description  : 4 service
+      sleepTimer   : 1000 # milliseconds
+
+    - name         : 5
+      sysService   : true
+      description  : boot service
+      sleepTimer   : 1000 # milliseconds
+
+    - name         : 6
+      sysService   : true
+      description  : log service
+      sleepTimer   : 1000 # milliseconds
+
+    - name         : 7
+      sysService   : true
+      description  : ntp service
+      sleepTimer   : 1000 # milliseconds
