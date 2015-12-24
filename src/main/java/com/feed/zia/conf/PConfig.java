@@ -6,9 +6,8 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public final class PConfig {
-    private static final AtomicInteger COUNTER = new AtomicInteger(0);
 
-    private final Integer id = COUNTER.getAndIncrement();
+    private Integer id;
     private String name;
     private List<String> dependencies;
     private String description;
@@ -53,6 +52,10 @@ public final class PConfig {
 
     public Integer getId() {
         return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getName() {

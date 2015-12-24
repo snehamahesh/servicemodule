@@ -2,13 +2,13 @@ package com.feed.zia.impl;
 
 import com.feed.zia.conf.PConfig;
 import com.feed.zia.conf.Services;
+import com.feed.zia.exception.ConfigCycleDetectedException;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestName;
 
 import java.io.IOException;
-import java.nio.file.NoSuchFileException;
 
 import static org.junit.Assert.assertTrue;
 
@@ -19,22 +19,21 @@ public class PulseProcessorTest {
 
     PulsarProcessor bootstrap;
 
-    @Rule
-    public TestName name = new TestName();
-
-    @Before
-    public void setup() throws Exception {
-        bootstrap = new PulsarProcessor("conf/services.yml");
+    @Test(expected = ConfigCycleDetectedException.class)
+    public void testCyclicDependency() throws IOException {
+        new PulsarProcessor("conf/cyclic-services.yml");
+        assertTrue(bootstrap == null);
     }
 
     @Test(expected = IOException.class)
-    public void testFail() throws IOException{
+    public void testFail() throws IOException {
         new PulsarProcessor("conf/fail.yml");
         assertTrue(bootstrap == null);
     }
 
     @Test
-    public void testStartAllStopAll() throws InterruptedException {
+    public void testStartAllStopAll() throws InterruptedException, IOException {
+        bootstrap = new PulsarProcessor("conf/services.yml");
         bootstrap.startAll();
         Services config = bootstrap.getConfig();
         config.getServices().stream().forEach(c -> assertTrue(c.getService() != null));
@@ -47,7 +46,8 @@ public class PulseProcessorTest {
 
 
     @Test
-    public void testStartStopSingleService() throws InterruptedException {
+    public void testStartStopSingleService() throws InterruptedException, IOException {
+        bootstrap = new PulsarProcessor("conf/services.yml");
         Services config = bootstrap.getConfig();
         PConfig pConfig = config.getServices().stream().filter(c -> c.getName().equals("1")).findFirst().get();
         bootstrap.start(pConfig);
@@ -59,7 +59,8 @@ public class PulseProcessorTest {
     }
 
     @Test
-    public void testStartStopMidAir() throws InterruptedException {
+    public void testStartStopMidAir() throws InterruptedException, IOException {
+        bootstrap = new PulsarProcessor("conf/services.yml");
         Services config = bootstrap.getConfig();
         PConfig pConfig = config.getServices().stream().filter(c -> c.getName().equals("1")).findFirst().get();
         bootstrap.start(pConfig);

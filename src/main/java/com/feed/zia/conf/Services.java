@@ -5,6 +5,7 @@ import java.util.IdentityHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Stack;
 import java.util.stream.Collectors;
 
 /**
@@ -63,6 +64,78 @@ public class Services {
 
     public void setServices(List<PConfig> services) {
         this.services = services;
+    }
+
+    public boolean hasCycle() {
+        return new CycleFinder().hasCycle();
+    }
+
+
+    public Iterable<PConfig> findCycle() {
+        CycleFinder cycleFinder = new CycleFinder();
+        return cycleFinder.hasCycle() ? cycleFinder.cycle() : Collections.EMPTY_LIST;
+    }
+
+    private class CycleFinder {
+        private boolean[] marked;        // marked[v] = has vertex v been marked?
+        private PConfig[] edgeTo;        // edgeTo[v] = previous vertex on path to v
+        private boolean[] onStack;       // onStack[v] = is vertex on the stack?
+        private Stack<PConfig> cycle;    // directed cycle (or null if no such cycle)
+
+        // Determines whether the digraph has a directed cycle and, if so, finds such a cycle.
+        public CycleFinder() {
+            marked = new boolean[graph.size()];
+            onStack = new boolean[graph.size()];
+            edgeTo = new PConfig[graph.size()];
+            for (PConfig pConfig : services) {
+                if (!marked[pConfig.getId()]) {
+                    dfs(pConfig);
+                }
+            }
+        }
+
+        // check that algorithm computes either the topological order or finds a directed cycle
+        private void dfs(PConfig v) {
+            onStack[v.getId()] = true;
+            marked[v.getId()] = true;
+            for (PConfig w : graph.get(v)) {
+                // short circuit if directed cycle found
+                if (cycle != null) {
+                    return;
+                } else if (!marked[w.getId()]) {  //found new vertex, so recur
+                    edgeTo[w.getId()] = v;
+                    dfs(w);
+                } else if (onStack[w.getId()]) {
+                    // trace back directed cycle
+                    cycle = new Stack<PConfig>();
+                    for (PConfig x = v; !x.equals(w); x = edgeTo[x.getId()]) {
+                        cycle.push(x);
+                    }
+                    cycle.push(w);
+                    cycle.push(v);
+                }
+            }
+            onStack[v.getId()] = false;
+        }
+
+        /**
+         * Does the digraph have a directed cycle?
+         *
+         * @return <tt>true</tt> if the digraph has a directed cycle, <tt>false</tt> otherwise
+         */
+        public boolean hasCycle() {
+            return cycle != null;
+        }
+
+        /**
+         * Returns a directed cycle if the digraph has a directed cycle, and <tt>null</tt> otherwise.
+         *
+         * @return a directed cycle (as an iterable) if the digraph has a directed cycle,
+         * and <tt>null</tt> otherwise
+         */
+        public Iterable<PConfig> cycle() {
+            return cycle;
+        }
     }
 
     @SuppressWarnings("PMD")

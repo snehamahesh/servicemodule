@@ -4,6 +4,7 @@ import com.feed.zia.PulseProcessorIfc;
 import com.feed.zia.PulseServiceIfc;
 import com.feed.zia.conf.PConfig;
 import com.feed.zia.conf.Services;
+import com.feed.zia.exception.ConfigCycleDetectedException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.yaml.snakeyaml.Yaml;
@@ -26,12 +27,12 @@ import java.util.concurrent.Future;
 public class PulsarProcessor implements PulseProcessorIfc {
     private static final Logger LOG = LoggerFactory.getLogger(PulsarProcessor.class);
 
-//    private final ExecutorService executorService;
+    //    private final ExecutorService executorService;
     private final CompletionService<PulseServiceIfc> completionService;
     private final Optional<Services> config;
 
     protected PulsarProcessor(String configFile)
-            throws IOException {
+            throws IOException, ConfigCycleDetectedException {
         try (InputStream in = Files.newInputStream(Paths.get(configFile))) {
             config = Optional.ofNullable(new Yaml().loadAs(in, Services.class));
         }
@@ -52,6 +53,14 @@ public class PulsarProcessor implements PulseProcessorIfc {
             }
         }
         System.out.println("Service Dependency Graph: \n" + services);
+        if (services.hasCycle()) {
+            System.out.println("Service Config Has Cycle! ");
+            Iterable<PConfig> iterator = services.findCycle();
+            for (PConfig pConfig : iterator) {
+                System.out.println("PConfig: " + pConfig);
+            }
+            throw new ConfigCycleDetectedException("Config has cycle: " + iterator);
+        }
         ExecutorService executorService = Executors.newFixedThreadPool(configs.size());
         completionService = new ExecutorCompletionService<PulseServiceIfc>(executorService);
     }

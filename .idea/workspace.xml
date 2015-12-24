@@ -1,7 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fc0d917b-ecda-44c0-a7ad-90528d745d97" name="Default" comment="" />
+    <list default="true" id="fc0d917b-ecda-44c0-a7ad-90528d745d97" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.5/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.5/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.5/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.5/taskArtifacts/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.5/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.5/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.5/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.5/taskArtifacts/outputFileStates.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.5/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.5/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/feed/zia/conf/PConfig.class" afterPath="$PROJECT_DIR$/build/classes/main/com/feed/zia/conf/PConfig.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/feed/zia/conf/Services.class" afterPath="$PROJECT_DIR$/build/classes/main/com/feed/zia/conf/Services.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/feed/zia/impl/PulsarProcessor$1.class" afterPath="$PROJECT_DIR$/build/classes/main/com/feed/zia/impl/PulsarProcessor$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/feed/zia/impl/PulsarProcessor.class" afterPath="$PROJECT_DIR$/build/classes/main/com/feed/zia/impl/PulsarProcessor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/test/com/feed/zia/impl/PulseProcessorTest.class" afterPath="$PROJECT_DIR$/build/classes/test/com/feed/zia/impl/PulseProcessorTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/jacoco/test.exec" afterPath="$PROJECT_DIR$/build/jacoco/test.exec" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/libs/service-module-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/build/libs/service-module-1.0-SNAPSHOT.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/binary/test/output.bin" afterPath="$PROJECT_DIR$/build/test-results/binary/test/output.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/binary/test/output.bin.idx" afterPath="$PROJECT_DIR$/build/test-results/binary/test/output.bin.idx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/binary/test/results.bin" afterPath="$PROJECT_DIR$/build/test-results/binary/test/results.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/checkstyle/allclasses-frame.html" afterPath="$PROJECT_DIR$/build/reports/checkstyle/allclasses-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/checkstyle/main.xml" afterPath="$PROJECT_DIR$/build/reports/checkstyle/main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/checkstyle/overview-frame.html" afterPath="$PROJECT_DIR$/build/reports/checkstyle/overview-frame.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/findbugs/main.html" afterPath="$PROJECT_DIR$/build/reports/findbugs/main.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/findbugs/main.xml" afterPath="$PROJECT_DIR$/build/reports/findbugs/main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/jacoco/test/html/.sessions.html" afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/.sessions.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/jacoco/test/html/com.feed.zia.conf/PConfig.html" afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/com.feed.zia.conf/PConfig.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/jacoco/test/html/com.feed.zia.conf/PConfig.java.html" afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/com.feed.zia.conf/PConfig.java.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/jacoco/test/html/com.feed.zia.conf/Services.html" afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/com.feed.zia.conf/Services.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/jacoco/test/html/com.feed.zia.conf/Services.java.html" afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/com.feed.zia.conf/Services.java.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/jacoco/test/html/com.feed.zia.conf/index.html" afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/com.feed.zia.conf/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/jacoco/test/html/com.feed.zia.conf/index.source.html" afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/com.feed.zia.conf/index.source.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/jacoco/test/html/com.feed.zia.impl/PulsarProcessor$1.html" afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/com.feed.zia.impl/PulsarProcessor$1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/jacoco/test/html/com.feed.zia.impl/PulsarProcessor.html" afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/com.feed.zia.impl/PulsarProcessor.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/jacoco/test/html/com.feed.zia.impl/PulsarProcessor.java.html" afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/com.feed.zia.impl/PulsarProcessor.java.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/jacoco/test/html/com.feed.zia.impl/index.html" afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/com.feed.zia.impl/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/jacoco/test/html/com.feed.zia.impl/index.source.html" afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/com.feed.zia.impl/index.source.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/jacoco/test/html/index.html" afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/pmd/main.html" afterPath="$PROJECT_DIR$/build/reports/pmd/main.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/pmd/main.xml" afterPath="$PROJECT_DIR$/build/reports/pmd/main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/classes/com.feed.zia.impl.PulseProcessorTest.html" afterPath="$PROJECT_DIR$/build/reports/tests/classes/com.feed.zia.impl.PulseProcessorTest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/classes/com.feed.zia.impl.PulseServiceTest.html" afterPath="$PROJECT_DIR$/build/reports/tests/classes/com.feed.zia.impl.PulseServiceTest.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/index.html" afterPath="$PROJECT_DIR$/build/reports/tests/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/packages/com.feed.zia.impl.html" afterPath="$PROJECT_DIR$/build/reports/tests/packages/com.feed.zia.impl.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/TEST-com.feed.zia.impl.PulseProcessorTest.xml" afterPath="$PROJECT_DIR$/build/test-results/TEST-com.feed.zia.impl.PulseProcessorTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/TEST-com.feed.zia.impl.PulseServiceTest.xml" afterPath="$PROJECT_DIR$/build/test-results/TEST-com.feed.zia.impl.PulseServiceTest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/services.yml" afterPath="$PROJECT_DIR$/conf/services.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feed/zia/conf/PConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/feed/zia/conf/PConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feed/zia/conf/Services.java" afterPath="$PROJECT_DIR$/src/main/java/com/feed/zia/conf/Services.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/feed/zia/impl/PulsarProcessor.java" afterPath="$PROJECT_DIR$/src/main/java/com/feed/zia/impl/PulsarProcessor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/feed/zia/impl/PulseProcessorTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/feed/zia/impl/PulseProcessorTest.java" />
+    </list>
     <ignored path="service-module.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -28,6 +78,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <PATH>
@@ -68,11 +121,23 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/feed/zia/impl/PulsarProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+              <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2339#2340#0" expanded="true" />
-                <element signature="e#2391#2392#0" expanded="true" />
+                <element signature="e#2808#2809#0" expanded="true" />
+                <element signature="e#2860#2861#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PulseProcessorTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/feed/zia/impl/PulseProcessorTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="21" column="49" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="49" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -82,29 +147,17 @@
         <entry file="file://$PROJECT_DIR$/conf/services.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
+              <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PulseProcessorTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/feed/zia/impl/PulseProcessorTest.java">
+      <file leaf-file-name="cyclic-services.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/conf/cyclic-services.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Test.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.11/4e031bb61df09069aeb2bffb4019e7a5034a4ee0/junit-4.11.jar!/org/junit/Test.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.037037">
-              <caret line="9" column="51" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
+              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -120,18 +173,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Services.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Services.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/feed/zia/conf/Services.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="41" column="47" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="47" />
+            <state vertical-scroll-proportion="0.23380281">
+              <caret line="138" column="4" selection-start-line="138" selection-start-column="4" selection-end-line="138" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1784#1785#0" expanded="true" />
-                <element signature="e#1815#1816#0" expanded="true" />
-                <element signature="e#1870#1871#0" expanded="true" />
-                <element signature="e#1910#1911#0" expanded="true" />
-                <element signature="e#1917#1941#0" expanded="true" />
+                <element signature="e#1808#1809#0" expanded="true" />
+                <element signature="e#1839#1840#0" expanded="true" />
+                <element signature="e#1894#1895#0" expanded="true" />
+                <element signature="e#1934#1935#0" expanded="true" />
+                <element signature="e#1967#1968#0" expanded="true" />
+                <element signature="e#2018#2019#0" expanded="true" />
+                <element signature="e#4205#4206#0" expanded="true" />
+                <element signature="e#4249#4250#0" expanded="true" />
+                <element signature="e#4559#4560#0" expanded="true" />
+                <element signature="e#4595#4596#0" expanded="true" />
+                <element signature="e#4608#4632#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -141,82 +200,71 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/feed/zia/conf/PConfig.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+              <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#656#657#0" expanded="true" />
-                <element signature="e#689#690#0" expanded="true" />
-                <element signature="e#738#739#0" expanded="true" />
-                <element signature="e#782#783#0" expanded="true" />
-                <element signature="e#821#822#0" expanded="true" />
-                <element signature="e#863#864#0" expanded="true" />
-                <element signature="e#895#896#0" expanded="true" />
-                <element signature="e#932#933#0" expanded="true" />
-                <element signature="e#972#973#0" expanded="true" />
-                <element signature="e#1015#1016#0" expanded="true" />
-                <element signature="e#1048#1049#0" expanded="true" />
-                <element signature="e#1086#1087#0" expanded="true" />
-                <element signature="e#1129#1130#0" expanded="true" />
-                <element signature="e#1159#1160#0" expanded="true" />
-                <element signature="e#1214#1215#0" expanded="true" />
-                <element signature="e#1252#1253#0" expanded="true" />
-                <element signature="e#1282#1283#0" expanded="true" />
-                <element signature="e#1307#1308#0" expanded="true" />
-                <element signature="e#1338#1339#0" expanded="true" />
+                <element signature="e#551#552#0" expanded="true" />
+                <element signature="e#584#585#0" expanded="true" />
+                <element signature="e#633#634#0" expanded="true" />
+                <element signature="e#677#678#0" expanded="true" />
+                <element signature="e#716#717#0" expanded="true" />
+                <element signature="e#758#759#0" expanded="true" />
+                <element signature="e#790#791#0" expanded="true" />
+                <element signature="e#827#828#0" expanded="true" />
+                <element signature="e#867#868#0" expanded="true" />
+                <element signature="e#910#911#0" expanded="true" />
+                <element signature="e#943#944#0" expanded="true" />
+                <element signature="e#981#982#0" expanded="true" />
+                <element signature="e#1024#1025#0" expanded="true" />
+                <element signature="e#1054#1055#0" expanded="true" />
+                <element signature="e#1109#1110#0" expanded="true" />
+                <element signature="e#1147#1148#0" expanded="true" />
+                <element signature="e#1177#1178#0" expanded="true" />
+                <element signature="e#1202#1203#0" expanded="true" />
+                <element signature="e#1239#1240#0" expanded="true" />
+                <element signature="e#1267#1268#0" expanded="true" />
+                <element signature="e#1298#1299#0" expanded="true" />
+                <element signature="e#1325#1326#0" expanded="true" />
                 <element signature="e#1365#1366#0" expanded="true" />
-                <element signature="e#1405#1406#0" expanded="true" />
-                <element signature="e#1437#1438#0" expanded="true" />
-                <element signature="e#1482#1483#0" expanded="true" />
-                <element signature="e#1517#1518#0" expanded="true" />
-                <element signature="e#1579#1580#0" expanded="true" />
-                <element signature="e#1627#1628#0" expanded="true" />
-                <element signature="e#1665#1666#0" expanded="true" />
-                <element signature="e#1699#1700#0" expanded="true" />
-                <element signature="e#1753#1754#0" expanded="true" />
-                <element signature="e#1799#1800#0" expanded="true" />
-                <element signature="e#1836#1837#0" expanded="true" />
-                <element signature="e#1869#1870#0" expanded="true" />
-                <element signature="e#1922#1923#0" expanded="true" />
-                <element signature="e#1966#1967#0" expanded="true" />
+                <element signature="e#1397#1398#0" expanded="true" />
+                <element signature="e#1442#1443#0" expanded="true" />
+                <element signature="e#1477#1478#0" expanded="true" />
+                <element signature="e#1539#1540#0" expanded="true" />
+                <element signature="e#1587#1588#0" expanded="true" />
+                <element signature="e#1625#1626#0" expanded="true" />
+                <element signature="e#1659#1660#0" expanded="true" />
+                <element signature="e#1713#1714#0" expanded="true" />
+                <element signature="e#1759#1760#0" expanded="true" />
+                <element signature="e#1796#1797#0" expanded="true" />
+                <element signature="e#1829#1830#0" expanded="true" />
+                <element signature="e#1882#1883#0" expanded="true" />
+                <element signature="e#1926#1927#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PulseService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/feed/zia/impl/PulseService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="103" column="16" selection-start-line="103" selection-start-column="16" selection-end-line="103" selection-end-column="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1098#1099#0" expanded="true" />
-                <element signature="e#1131#1132#0" expanded="true" />
-                <element signature="e#4066#4067#0" expanded="true" />
-                <element signature="e#4099#4100#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider editor-type-id="MarkdownPreviewEditor">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.04992658">
-              <caret line="2" column="110" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="110" />
+            <state vertical-scroll-proportion="-19.37931">
+              <caret line="58" column="87" selection-start-line="58" selection-start-column="87" selection-end-line="58" selection-end-column="87" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PulseServiceIfc.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/feed/zia/PulseServiceIfc.java">
+      <file leaf-file-name="DESIGN.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/DESIGN.md">
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state vertical-scroll-proportion="-14.655172">
+              <caret line="25" column="73" selection-start-line="25" selection-start-column="73" selection-end-line="25" selection-end-column="73" />
               <folding />
             </state>
           </provider>
@@ -230,6 +278,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="availableProjects">
@@ -592,7 +643,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/neustar/cch/rer/SftpTransporter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/neustar/cch/adaptor/connector/Generator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/neustar/cch/common/util/Util.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/neustar/cch/adaptor/syntax/RecNonTerminal.java" />
@@ -631,15 +681,19 @@
         <option value="$PROJECT_DIR$/src/test/java/com/feed/zia/impl/conf/com/PulseProcessorTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/feed/zia/PulseProcessorIfc.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/feed/zia/impl/PulseServiceTest.java" />
-        <option value="$PROJECT_DIR$/conf/services.yml" />
         <option value="$PROJECT_DIR$/src/main/java/com/feed/zia/PulseServiceIfc.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/feed/zia/conf/Services.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/feed/zia/impl/PulseService.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/java/com/feed/zia/conf/CycleFinder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/feed/zia/exception/ConfigCycleDetectedException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/feed/zia/impl/PulsarProcessor.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/feed/zia/impl/PulseProcessorTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/feed/zia/impl/PulseService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/feed/zia/conf/PConfig.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/conf/services.yml" />
+        <option value="$PROJECT_DIR$/conf/cyclic-services.yml" />
+        <option value="$PROJECT_DIR$/DESIGN.md" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/main/java/com/feed/zia/conf/Services.java" />
       </list>
     </option>
   </component>
@@ -705,6 +759,10 @@
               <option name="myItemId" value="service-module" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service-module" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -723,11 +781,14 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.feed.zia.conf" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\workspace\service-module\conf" />
       <recent name="C:\workspace\service-module\src\test\resources" />
       <recent name="C:\workspace\service-module\src\main\java\resources" />
       <recent name="C:\workspace\service-module" />
-      <recent name="C:\workspace\service-module\conf" />
     </key>
   </component>
   <component name="RunManager" selected="Gradle.PulseProcessorTest">
@@ -737,25 +798,6 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" value="--tests com.feed.zia.impl.PulseProcessorTest" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="cleanTest" />
-            <option value="test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <method />
-    </configuration>
-    <configuration default="false" name="testStartStopSingleService" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;com.feed.zia.impl.PulseProcessorTest.testStartStopSingleService&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -813,6 +855,25 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" value="--tests &quot;com.feed.zia.impl.PulseProcessorTest.testStartStopMidAir&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="cleanTest" />
+            <option value="test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="false" name="testCyclicDependency" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;com.feed.zia.impl.PulseProcessorTest.testCyclicDependency&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -1104,18 +1165,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Gradle.PulseProcessorTest" />
-      <item index="1" class="java.lang.String" itemvalue="Gradle.testStartStopSingleService" />
-      <item index="2" class="java.lang.String" itemvalue="Gradle.testStartAllStopAll" />
-      <item index="3" class="java.lang.String" itemvalue="Gradle.testFailureService" />
-      <item index="4" class="java.lang.String" itemvalue="Gradle.testStartStopMidAir" />
+      <item index="1" class="java.lang.String" itemvalue="Gradle.testStartAllStopAll" />
+      <item index="2" class="java.lang.String" itemvalue="Gradle.testFailureService" />
+      <item index="3" class="java.lang.String" itemvalue="Gradle.testStartStopMidAir" />
+      <item index="4" class="java.lang.String" itemvalue="Gradle.testCyclicDependency" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Gradle.PulseProcessorTest" />
-        <item index="1" class="java.lang.String" itemvalue="Gradle.testStartStopMidAir" />
-        <item index="2" class="java.lang.String" itemvalue="Gradle.testFailureService" />
-        <item index="3" class="java.lang.String" itemvalue="Gradle.testStartAllStopAll" />
-        <item index="4" class="java.lang.String" itemvalue="Gradle.testStartStopSingleService" />
+        <item index="1" class="java.lang.String" itemvalue="Gradle.testCyclicDependency" />
+        <item index="2" class="java.lang.String" itemvalue="Gradle.testStartStopMidAir" />
+        <item index="3" class="java.lang.String" itemvalue="Gradle.testFailureService" />
+        <item index="4" class="java.lang.String" itemvalue="Gradle.testStartAllStopAll" />
       </list>
     </recent_temporary>
   </component>
@@ -1129,44 +1190,44 @@
       <created>1450587954233</created>
       <option name="number" value="Default" />
       <updated>1450587954233</updated>
-      <workItem from="1450587957517" duration="71958000" />
+      <workItem from="1450587957517" duration="81363000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PulseProcessorTest - 2015.12.23 at 00h 07m 40s.xml">
+    <history-entry file="PulseProcessorTest - 2015.12.23 at 20h 38m 56s.xml">
       <configuration name="PulseProcessorTest" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="PulseProcessorTest - 2015.12.23 at 00h 23m 35s.xml">
+    <history-entry file="PulseProcessorTest - 2015.12.24 at 09h 44m 55s.xml">
       <configuration name="PulseProcessorTest" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="PulseProcessorTest - 2015.12.23 at 00h 24m 18s.xml">
+    <history-entry file="PulseProcessorTest - 2015.12.24 at 09h 45m 57s.xml">
       <configuration name="PulseProcessorTest" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="PulseProcessorTest - 2015.12.23 at 00h 26m 33s.xml">
-      <configuration name="PulseProcessorTest" configurationId="GradleRunConfiguration" />
+    <history-entry file="testCyclicDependency - 2015.12.23 at 19h 44m 54s.xml">
+      <configuration name="testCyclicDependency" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="testFailureService - 2015.12.23 at 00h 19m 20s.xml">
-      <configuration name="testFailureService" configurationId="GradleRunConfiguration" />
+    <history-entry file="testCyclicDependency - 2015.12.23 at 19h 48m 46s.xml">
+      <configuration name="testCyclicDependency" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="testFailureService - 2015.12.23 at 00h 20m 10s.xml">
-      <configuration name="testFailureService" configurationId="GradleRunConfiguration" />
+    <history-entry file="testCyclicDependency - 2015.12.23 at 20h 13m 58s.xml">
+      <configuration name="testCyclicDependency" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="testStartAllStopAll - 2015.12.23 at 00h 02m 38s.xml">
-      <configuration name="testStartAllStopAll" configurationId="GradleRunConfiguration" />
+    <history-entry file="testCyclicDependency - 2015.12.23 at 20h 19m 41s.xml">
+      <configuration name="testCyclicDependency" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="testStartAllStopAll - 2015.12.23 at 00h 07m 02s.xml">
-      <configuration name="testStartAllStopAll" configurationId="GradleRunConfiguration" />
+    <history-entry file="testCyclicDependency - 2015.12.23 at 20h 20m 56s.xml">
+      <configuration name="testCyclicDependency" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="testStartStopMidAir - 2015.12.23 at 00h 20m 23s.xml">
-      <configuration name="testStartStopMidAir" configurationId="GradleRunConfiguration" />
+    <history-entry file="testCyclicDependency - 2015.12.23 at 20h 36m 11s.xml">
+      <configuration name="testCyclicDependency" configurationId="GradleRunConfiguration" />
     </history-entry>
-    <history-entry file="testStartStopSingleService - 2015.12.23 at 00h 02m 03s.xml">
-      <configuration name="testStartStopSingleService" configurationId="GradleRunConfiguration" />
+    <history-entry file="testCyclicDependency - 2015.12.23 at 20h 38m 42s.xml">
+      <configuration name="testCyclicDependency" configurationId="GradleRunConfiguration" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71958000" />
+    <option name="totallyTimeSpent" value="81363000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1188,7 +1249,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5623306" sideWeight="0.5025974" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.76287264" sideWeight="0.4974026" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5108401" sideWeight="0.4974026" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
@@ -1206,32 +1267,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32791328" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5623306" sideWeight="0.5025974" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6097561" sideWeight="0.4974026" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32791328" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32987013" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1398,46 +1433,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/conf/services.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/feed/zia/PulseServiceIfc.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/feed/zia/conf/Services.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="47" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1784#1785#0" expanded="true" />
-            <element signature="e#1815#1816#0" expanded="true" />
-            <element signature="e#1870#1871#0" expanded="true" />
-            <element signature="e#1910#1911#0" expanded="true" />
-            <element signature="e#1917#1941#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/feed/zia/impl/PulsarProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2339#2340#0" expanded="true" />
-            <element signature="e#2391#2392#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1457,16 +1457,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/feed/zia/impl/PulseProcessorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/feed/zia/impl/PulseService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1481,54 +1471,113 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/feed/zia/conf/PConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#656#657#0" expanded="true" />
-            <element signature="e#689#690#0" expanded="true" />
-            <element signature="e#738#739#0" expanded="true" />
-            <element signature="e#782#783#0" expanded="true" />
-            <element signature="e#821#822#0" expanded="true" />
-            <element signature="e#863#864#0" expanded="true" />
-            <element signature="e#895#896#0" expanded="true" />
-            <element signature="e#932#933#0" expanded="true" />
-            <element signature="e#972#973#0" expanded="true" />
-            <element signature="e#1015#1016#0" expanded="true" />
-            <element signature="e#1048#1049#0" expanded="true" />
-            <element signature="e#1086#1087#0" expanded="true" />
-            <element signature="e#1129#1130#0" expanded="true" />
-            <element signature="e#1159#1160#0" expanded="true" />
-            <element signature="e#1214#1215#0" expanded="true" />
-            <element signature="e#1252#1253#0" expanded="true" />
-            <element signature="e#1282#1283#0" expanded="true" />
-            <element signature="e#1307#1308#0" expanded="true" />
-            <element signature="e#1338#1339#0" expanded="true" />
-            <element signature="e#1365#1366#0" expanded="true" />
-            <element signature="e#1405#1406#0" expanded="true" />
-            <element signature="e#1437#1438#0" expanded="true" />
-            <element signature="e#1482#1483#0" expanded="true" />
-            <element signature="e#1517#1518#0" expanded="true" />
-            <element signature="e#1579#1580#0" expanded="true" />
-            <element signature="e#1627#1628#0" expanded="true" />
-            <element signature="e#1665#1666#0" expanded="true" />
-            <element signature="e#1699#1700#0" expanded="true" />
-            <element signature="e#1753#1754#0" expanded="true" />
-            <element signature="e#1799#1800#0" expanded="true" />
-            <element signature="e#1836#1837#0" expanded="true" />
-            <element signature="e#1869#1870#0" expanded="true" />
-            <element signature="e#1922#1923#0" expanded="true" />
-            <element signature="e#1966#1967#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/feed/zia/exception/ConfigCycleDetectedException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="41" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/feed/zia/conf/PConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#551#552#0" expanded="true" />
+            <element signature="e#584#585#0" expanded="true" />
+            <element signature="e#633#634#0" expanded="true" />
+            <element signature="e#677#678#0" expanded="true" />
+            <element signature="e#716#717#0" expanded="true" />
+            <element signature="e#758#759#0" expanded="true" />
+            <element signature="e#790#791#0" expanded="true" />
+            <element signature="e#827#828#0" expanded="true" />
+            <element signature="e#867#868#0" expanded="true" />
+            <element signature="e#910#911#0" expanded="true" />
+            <element signature="e#943#944#0" expanded="true" />
+            <element signature="e#981#982#0" expanded="true" />
+            <element signature="e#1024#1025#0" expanded="true" />
+            <element signature="e#1054#1055#0" expanded="true" />
+            <element signature="e#1109#1110#0" expanded="true" />
+            <element signature="e#1147#1148#0" expanded="true" />
+            <element signature="e#1177#1178#0" expanded="true" />
+            <element signature="e#1202#1203#0" expanded="true" />
+            <element signature="e#1239#1240#0" expanded="true" />
+            <element signature="e#1267#1268#0" expanded="true" />
+            <element signature="e#1298#1299#0" expanded="true" />
+            <element signature="e#1325#1326#0" expanded="true" />
+            <element signature="e#1365#1366#0" expanded="true" />
+            <element signature="e#1397#1398#0" expanded="true" />
+            <element signature="e#1442#1443#0" expanded="true" />
+            <element signature="e#1477#1478#0" expanded="true" />
+            <element signature="e#1539#1540#0" expanded="true" />
+            <element signature="e#1587#1588#0" expanded="true" />
+            <element signature="e#1625#1626#0" expanded="true" />
+            <element signature="e#1659#1660#0" expanded="true" />
+            <element signature="e#1713#1714#0" expanded="true" />
+            <element signature="e#1759#1760#0" expanded="true" />
+            <element signature="e#1796#1797#0" expanded="true" />
+            <element signature="e#1829#1830#0" expanded="true" />
+            <element signature="e#1882#1883#0" expanded="true" />
+            <element signature="e#1926#1927#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/feed/zia/impl/PulsarProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2808#2809#0" expanded="true" />
+            <element signature="e#2860#2861#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf/cyclic-services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/feed/zia/impl/PulseProcessorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="49" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DESIGN.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.655172">
+          <caret line="25" column="73" selection-start-line="25" selection-start-column="73" selection-end-line="25" selection-end-column="73" />
           <folding />
         </state>
       </provider>
@@ -1538,9 +1587,30 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.04992658">
-          <caret line="2" column="110" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="110" />
+        <state vertical-scroll-proportion="-19.37931">
+          <caret line="58" column="87" selection-start-line="58" selection-start-column="87" selection-end-line="58" selection-end-column="87" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/feed/zia/conf/Services.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23380281">
+          <caret line="138" column="4" selection-start-line="138" selection-start-column="4" selection-end-line="138" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1808#1809#0" expanded="true" />
+            <element signature="e#1839#1840#0" expanded="true" />
+            <element signature="e#1894#1895#0" expanded="true" />
+            <element signature="e#1934#1935#0" expanded="true" />
+            <element signature="e#1967#1968#0" expanded="true" />
+            <element signature="e#2018#2019#0" expanded="true" />
+            <element signature="e#4205#4206#0" expanded="true" />
+            <element signature="e#4249#4250#0" expanded="true" />
+            <element signature="e#4559#4560#0" expanded="true" />
+            <element signature="e#4595#4596#0" expanded="true" />
+            <element signature="e#4608#4632#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
