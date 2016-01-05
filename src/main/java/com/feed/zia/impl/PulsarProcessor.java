@@ -39,7 +39,7 @@ public class PulsarProcessor implements PulseProcessorIfc {
         Services services = config.orElse(new Services());
         List<PConfig> configs = services.getServices();
         for (PConfig pulsar : configs) {
-//                System.out.println(pulsar);
+//                LOG.debug(pulsar);
             if (pulsar.getDependencies() != null) {
                 pulsar.getDependencies().forEach(name -> {
                     configs.stream().filter(s -> name.equals(s.getName()))
@@ -52,12 +52,12 @@ public class PulsarProcessor implements PulseProcessorIfc {
                 services.addEmptyDependent(pulsar);
             }
         }
-        System.out.println("Service Dependency Graph: \n" + services);
+        LOG.debug("Service Dependency Graph: \n" + services);
         if (services.hasCycle()) {
-            System.out.println("Service Config Has Cycle! ");
+            LOG.debug("Service Config Has Cycle! ");
             Iterable<PConfig> iterator = services.findCycle();
             for (PConfig pConfig : iterator) {
-                System.out.println("PConfig: " + pConfig);
+                LOG.debug("PConfig: " + pConfig);
             }
             throw new ConfigCycleDetectedException("Config has cycle: " + iterator);
         }
@@ -69,30 +69,30 @@ public class PulsarProcessor implements PulseProcessorIfc {
         return config.orElse(new Services());
     }
 
-    private Future<PulseServiceIfc> submit(Services services, PConfig pConfig) {
-        System.out.println("LAUNCHING: " + pConfig);
+    private Future<PulseServiceIfc> submit(Services services, PConfig pConfig, Runnable runnable) {
+        LOG.debug("LAUNCHING: " + pConfig);
         pConfig.setService(new PulseService(pConfig,
                 services.getDependsOn(pConfig),
                 services.getDependentsOf(pConfig)));
         return completionService.submit(new Callable<PulseServiceIfc>() {
             public PulseServiceIfc call() {
                 Thread thread = Thread.currentThread();
-                thread.setName("service-" + String.format("%s", pConfig.toString()));
-                pConfig.getService().start();
+                thread.setName("svc-" + String.format("%s", pConfig.toString()));
+                pConfig.getService().start(pConfig, runnable);
                 return pConfig.getService();
             }
         });
     }
 
-    public void start(PConfig serviceConfig) {
+    public void start(PConfig serviceConfig, Runnable runnable) {
         Services services = config.orElse(new Services());
         if (serviceConfig.getService() == null) {
-            submit(services, serviceConfig);
+            submit(services, serviceConfig, runnable);
         }
         List<PConfig> dependsOn = services.getDependsOn(serviceConfig);
         dependsOn.forEach(pConfig -> {
             if (pConfig.getService() == null) {
-                start(pConfig);
+                start(pConfig, null);
             }
         });
     }
@@ -104,22 +104,22 @@ public class PulsarProcessor implements PulseProcessorIfc {
         List<PConfig> configs = services.getServices();
 
         for (PConfig serviceConfig : configs) {
-            start(serviceConfig);
+            start(serviceConfig, null);
         }
     }
 
     public void stop(PConfig serviceConfig) {
         if (serviceConfig.getService() != null && !serviceConfig.getService().atExit()) {
-            System.out.println("STOPPING: " + serviceConfig);
-            serviceConfig.getService().stop();
+            LOG.debug("STOPPING: " + serviceConfig);
+            serviceConfig.getService().stop(serviceConfig);
         }
-        Services services = config.orElse(new Services());
-        List<PConfig> dependentsOf = services.getDependentsOf(serviceConfig);
-        dependentsOf.forEach(pConfig -> {
-            if (pConfig.getService() != null) {
-                stop(pConfig);
-            }
-        });
+//        Services services = config.orElse(new Services());
+//        List<PConfig> dependentsOf = services.getDependentsOf(serviceConfig);
+//        dependentsOf.forEach(pConfig -> {
+//            if (pConfig.getService() != null) {
+//                stop(pConfig);
+//            }
+//        });
     }
 
     public void stopAll() {

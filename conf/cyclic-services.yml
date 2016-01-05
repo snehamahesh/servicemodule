@@ -4,16 +4,19 @@ services:
       name         : 0
       dependencies : [1]
       description  : 1 service
-      sleepTimer   : 1000 # milliseconds
+      startTimer   : 1000 # milliseconds
+      workTimer    : 1000 # milliseconds
 
     - id           : 1
       name         : 1
       dependencies : [2]
       description  : 2 service
-      sleepTimer   : 1000 # milliseconds
+      startTimer   : 1000 # milliseconds
+      workTimer    : 1000 # milliseconds
 
     - id           : 2
       name         : 2
       dependencies : [0]
       description  : 2 service
-      sleepTimer   : 1000 # milliseconds
+      startTimer   : 1000 # milliseconds
+      workTimer    : 1000 # milliseconds

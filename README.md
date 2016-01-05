@@ -51,9 +51,11 @@ Following reports are available to review:
 6. [SERVICE_MODULE_PATH]/build/reports/jacoco/test/html/index.html
 
 ###  TODO:
-1. Finding the Cycle within the dependency graph to abort the service startup to avoid cyclic deadlock.
-2. Integrate the exceptions mechanism to the use case to make it robust.
+1. Integrate the exceptions mechanism to the use case to make it robust.
+2. Add more code coverage and unit/functional cases to include all code path.
 
 ###  Change Log:
 1. Adding Junits.
 2. Adding CycleFinder for the service configurations with ConfigCycleDetectedException.
+3. Modified design of services to leverage the synchronization and correct semantics of InterruptedException. 
+4. Integrated an external Runnable that can be hosted with service start.

@@ -9,6 +9,7 @@ import org.junit.Test;
 import org.junit.rules.TestName;
 
 import java.io.IOException;
+import java.io.InterruptedIOException;
 
 import static org.junit.Assert.assertTrue;
 
@@ -44,13 +45,17 @@ public class PulseProcessorTest {
         config.getServices().stream().forEach(c -> assertTrue(c.getService().atExit()));
     }
 
-
     @Test
     public void testStartStopSingleService() throws InterruptedException, IOException {
         bootstrap = new PulsarProcessor("conf/services.yml");
         Services config = bootstrap.getConfig();
         PConfig pConfig = config.getServices().stream().filter(c -> c.getName().equals("1")).findFirst().get();
-        bootstrap.start(pConfig);
+        bootstrap.start(pConfig, new Runnable() {
+            @Override
+            public void run()  {
+                Thread.currentThread().interrupt();
+            }
+        });
         assertTrue(pConfig.getService() != null);
         //CHECKSTYLE IGNORE MagicNumber FOR NEXT LINE
         Thread.sleep(16 * 1000);
@@ -63,7 +68,12 @@ public class PulseProcessorTest {
         bootstrap = new PulsarProcessor("conf/services.yml");
         Services config = bootstrap.getConfig();
         PConfig pConfig = config.getServices().stream().filter(c -> c.getName().equals("1")).findFirst().get();
-        bootstrap.start(pConfig);
+        bootstrap.start(pConfig, new Runnable() {
+            @Override
+            public void run()  {
+                System.out.println("testStartStopMidAir:");
+            }
+        });
         assertTrue(pConfig.getService() != null);
         //CHECKSTYLE IGNORE MagicNumber FOR NEXT LINE
         bootstrap.stop(pConfig);
@@ -71,5 +81,4 @@ public class PulseProcessorTest {
         bootstrap.stop(pConfig);
         assertTrue(pConfig.getService().atExit());
     }
-
 }

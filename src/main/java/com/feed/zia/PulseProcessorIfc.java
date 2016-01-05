@@ -7,7 +7,7 @@ import com.feed.zia.conf.PConfig;
  */
 public interface PulseProcessorIfc {
 
-    void start(PConfig service);
+    void start(PConfig service, Runnable runnable);
 
     void startAll();
 

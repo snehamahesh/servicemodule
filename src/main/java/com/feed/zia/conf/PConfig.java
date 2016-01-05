@@ -12,18 +12,27 @@ public final class PConfig {
     private List<String> dependencies;
     private String description;
     private boolean sysService;
-    private int sleepTimer;
+    private int startTimer;
+    private int workTimer;
 
     private PulseServiceIfc service;
     private final AtomicInteger inDegree = new AtomicInteger(0);
     private final AtomicInteger outDegree = new AtomicInteger(0);
 
-    public int getSleepTimer() {
-        return sleepTimer;
+    public int getWorkTimer() {
+        return workTimer;
     }
 
-    public void setSleepTimer(int sleepTimer) {
-        this.sleepTimer = sleepTimer;
+    public void setWorkTimer(int workTimer) {
+        this.workTimer = workTimer;
+    }
+
+    public int getStartTimer() {
+        return startTimer;
+    }
+
+    public void setStartTimer(int startTimer) {
+        this.startTimer = startTimer;
     }
 
     public void incrementInDegree() {
