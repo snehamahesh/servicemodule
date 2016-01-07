@@ -40,7 +40,8 @@ public class PulseService implements PulseServiceIfc {
 
 
     private boolean startService() {
-        while (!timeToExit.get() && lowerServicesLatch.getCount() != 0) {
+        boolean done = timeToExit.get();
+        while (!done) {
             try {
                 if (!lowerServices.isEmpty()) {
                     LOG.debug(" WAIT lowerServices to start: " + lowerServices);
@@ -57,25 +58,45 @@ public class PulseService implements PulseServiceIfc {
                 } else {
                     LOG.debug(" NO upperServices to signal: " + lowerServices);
                 }
+                done = true;
             } catch (InterruptedException ie) {
-                if (!timeToExit.get() && thread.isInterrupted()) {
+                if (timeToExit.get()) {
+                    // NOTE: including the current-service/user has to hint the service stop via stop() interface.
+                    //       dependency-services will also call the stop() interface to force the exit.
+                    LOG.info("SOMEBODY WISHES TO STOP SERVICE WHILE SERVICE START!!!");
+                } else {
                     LOG.error("SPURIOUS WAKEUP INTERRUPTION FOR START SERVICE!!!");
-                    timeToExit.set(true);
+                }
+                if (thread.isInterrupted() && Thread.currentThread().equals(thread)) {
+                    // clear the interruption state so the cleanup can continue without!!
+                    done = Thread.currentThread().interrupted();
                 }
             }
         }
-        return lowerServicesLatch.getCount() == 0;
+        return done;
     }
 
     private void stopServiceAndBroadcast() {
-        long done = upperServicesLatch.getCount();
-        while (done > 0) {
+        boolean done = false;
+        while (!done) {
             try {
                 upperServices.keySet().forEach(uc -> uc.getService().stop(serviceConfig));
                 lowerServices.keySet().forEach(lc -> lc.getService().stop(serviceConfig));
                 upperServicesLatch.await();
+                done = true;
             } catch (InterruptedException ie) {
-                done = upperServicesLatch.getCount();
+                if (timeToExit.get()) {
+                    // NOTE: including the current-service/user has to hint the service stop via stop() interface.
+                    //       dependency-services will also call the stop() interface to force the exit.
+                    LOG.info("SOMEBODY WISHES TO STOP SERVICE WHILE SHUTTING DOWN!!!");
+                } else {
+                    LOG.error("SPURIOUS WAKEUP INTERRUPTION WHILE SHUTTING DOWN!!!");
+                }
+                if (thread.isInterrupted() && Thread.currentThread().equals(thread)) {
+                    // clear the interruption state so the cleanup can continue without!!
+                    Thread.currentThread().interrupted();
+                }
+                done = false;  // lets continue shutting down properly!!
             }
         }
     }
@@ -92,32 +113,43 @@ public class PulseService implements PulseServiceIfc {
                     runnable.run();
                 }
             } catch (InterruptedException ie) {
-                if (!timeToExit.get() && thread.isInterrupted()) {
+                if (timeToExit.get()) {
+                    // NOTE: including the current-service/user has to hint the service stop via stop() interface.
+                    //       dependency-services will also call the stop() interface to force the exit.
+                    LOG.info("SOMEBODY WISHES TO STOP SERVICE WHILE WORKING HARD!!!");
+                } else {
                     LOG.error("SPURIOUS WAKEUP INTERRUPTION WHILE WORKING HARD!!!");
-                    timeToExit.set(true);
+                }
+                if (thread.isInterrupted() && Thread.currentThread().equals(thread)) {
+                    // clear the interruption state so the cleanup can continue without!!
+                    Thread.currentThread().interrupted();
+                    break;
                 }
             }
         }
     }
 
     public void start(PConfig caller, Runnable runnable) {
-        if (caller != null && !caller.equals(serviceConfig)) {
-            // Signal the Start Done to dependent services;
-            // idempotent operation: can inform the dependent without side-effect of reducing the latches.
-            Thread current = Thread.currentThread();
-            LOG.debug(" signaling dependent: " + serviceConfig + " start done by: " + current.getName());
-            // caller must be a service that the current/this depends on
-            done(caller, lowerServices, lowerServicesLatch);
-        }
-        if (caller != null && caller.equals(serviceConfig)) {
-            thread = Thread.currentThread();
-            if (startService()) {
-                simulateWorkWithoutInterruption(runnable);
+        if (Objects.nonNull(caller)) {
+            if (caller.equals(serviceConfig) && (Objects.isNull(thread) || !thread.isAlive())) {
+                // Service must be alive only as singleton!! otherwise a rouge caller can wack this to death!!
+                thread = Thread.currentThread();
+                if (startService()) {
+                    simulateWorkWithoutInterruption(runnable);
+                }
+                stopServiceAndBroadcast();
+                LOG.debug(" SERVICE SHUTDOWN " +
+                        (timeToExit.get() && upperServicesLatch.getCount() == 0 ? "SUCCESS" : "FAILURE") + "\n");
+                LOG.debug(" call for shutdown? -> timeToExit: " + timeToExit.get());
+
+            } else if (!caller.equals(serviceConfig)) {
+                // Signal the Start Done to dependent services;
+                // idempotent operation: can inform the dependent without side-effect of reducing the latches.
+                Thread current = Thread.currentThread();
+                LOG.debug(" signaling dependent: " + serviceConfig + " start done by: " + current.getName());
+                // caller must be a service that the current/this depends on
+                done(caller, lowerServices, lowerServicesLatch);
             }
-            stopServiceAndBroadcast();
-            LOG.debug(" SERVICE SHUTDOWN " +
-                    (timeToExit.get() && upperServicesLatch.getCount() == 0 ? "SUCCESS" : "FAILURE") + "\n");
-            LOG.debug(" call for shutdown? -> timeToExit: " + timeToExit.get());
         }
     }
 

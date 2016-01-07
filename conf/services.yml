@@ -4,47 +4,47 @@ services:
       name         : 0
       dependencies : [5]
       description  : 1 service
-      startTimer   : 3000 # milliseconds
-      workTimer    : 5000 # milliseconds
+      startTimer   : 1000 # milliseconds
+      workTimer    : 2000 # milliseconds
 
     - id           : 1
       name         : 1
       dependencies : [6,4]
       description  : 2 service
-      startTimer   : 3000 # milliseconds
-      workTimer    : 5000 # milliseconds
+      startTimer   : 1000 # milliseconds
+      workTimer    : 2000 # milliseconds
 
     - id           : 2
       name         : 2
       dependencies : [6,4]
       description  : 3 service
-      startTimer   : 3000 # milliseconds
-      workTimer    : 5000 # milliseconds
+      startTimer   : 1000 # milliseconds
+      workTimer    : 2000 # milliseconds
 
     - id           : 3
       name         : 3
       dependencies : [6,5,1]
       description  : 4 service
-      startTimer   : 3000 # milliseconds
-      workTimer    : 5000 # milliseconds
+      startTimer   : 1000 # milliseconds
+      workTimer    : 2000 # milliseconds
 
     - id           : 4
       name         : 4
       sysService   : true
       description  : boot service
-      startTimer   : 3000 # milliseconds
-      workTimer    : 5000 # milliseconds
+      startTimer   : 1000 # milliseconds
+      workTimer    : 2000 # milliseconds
 
     - id           : 5
       name         : 5
       sysService   : true
       description  : log service
-      startTimer   : 3000 # milliseconds
-      workTimer    : 5000 # milliseconds
+      startTimer   : 1000 # milliseconds
+      workTimer    : 2000 # milliseconds
 
     - id           : 6
       name         : 6
       sysService   : true
       description  : ntp service
-      startTimer   : 3000 # milliseconds
-      workTimer    : 5000 # milliseconds
+      startTimer   : 1000 # milliseconds
+      workTimer    : 2000 # milliseconds

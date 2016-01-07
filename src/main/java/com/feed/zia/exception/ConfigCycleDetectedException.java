@@ -5,10 +5,6 @@ package com.feed.zia.exception;
  */
 public class ConfigCycleDetectedException extends RuntimeException {
 
-    public ConfigCycleDetectedException(String string, Exception e) {
-        super(string, e);
-    }
-
     public ConfigCycleDetectedException(String string) {
         super(string);
     }
